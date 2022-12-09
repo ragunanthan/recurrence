@@ -2,7 +2,8 @@
   export enum FrequencyType {
     Daily = 'daily',
     Weekly = 'weekly',
-    Monthly = 'monthly'
+    Monthly = 'monthly',
+    Yearly = 'yearly'
   }
   
   export enum DayType {
@@ -22,16 +23,32 @@
     Fourth = "Fourth",
     Last = "Last",
   }
-
-
+  
+  export enum MonthType {
+    January = 'January',
+    February = 'February',
+    March = 'March',
+    April = "April",
+    May = "May",
+    June = "June",
+    July = "July",
+    August = "August",
+    September = "September",
+    October = "October",
+    November = "November",
+    December = "December"
+  }
   export interface RecurrenceType {
     startDate: string
     endDate: string
     frequency: FrequencyType
     numberOfRepetitions: number
     weekDaysRepetition?: Array<{id : DayType, label : string}>
-    weekInterval ?: string
-    dayInterval ? : string
+    onByDate : string
+    onDate ?: number
+    onWeek ?: string
+    onDay ? : string
+    onMonth ?:string
   }
   
   export interface RecurrenceDay {

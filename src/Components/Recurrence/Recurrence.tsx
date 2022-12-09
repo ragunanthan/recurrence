@@ -3,7 +3,7 @@ import { Flex, Text,Tr,Td , Tbody, Table } from '@chakra-ui/react';
 import {Form  } from 'formik';
 import { DatePickerFormControl } from '../FormComponents/DatePicker';
 import { Formik } from 'formik';
-import { DayType, FrequencyType, WeekType } from './types';
+import { DayType, FrequencyType, MonthType, WeekType } from './types';
 import { SelectedDays } from './utils';
 import { FrequencySelector } from './FrequencySelector';
 import { RenderText } from './OccursAt';
@@ -23,9 +23,13 @@ export function Recurrence({maxW} : RecurrenceType) {
         endDate: "",
         frequency: FrequencyType.Daily,
         numberOfRepetitions: 1,
+        
+        onByDate : "false",
         weekDaysRepetition: SelectedDays,
-        weekInterval: WeekType.First,
-        dayInterval: DayType.Monday,
+        onDate : 1,
+        onWeek: WeekType.First,
+        onDay: DayType.Monday,
+        onMonth : MonthType.January
       }}
       onSubmit={(e) => {}}
     >
