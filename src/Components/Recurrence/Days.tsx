@@ -1,6 +1,6 @@
 import { Box, Text, Flex } from "@chakra-ui/react";
 import { useField } from 'formik';
-import { DayInput } from "./Recurrence/utils";
+import { DayInput } from "./utils";
 
 type DaysPropType = {
   selected: {label : string, id : string}[];

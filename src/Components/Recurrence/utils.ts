@@ -121,3 +121,8 @@ export let DayInput = [
     id: DayType.Saturday,
   },
 ];
+
+
+export let gap = {
+  gap : "6"
+}

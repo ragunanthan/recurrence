@@ -25,8 +25,8 @@
 
 
   export interface RecurrenceType {
-    startDate: Date
-    endDate: Date
+    startDate: string
+    endDate: string
     frequency: FrequencyType
     numberOfRepetitions: number
     weekDaysRepetition?: Array<{id : DayType, label : string}>
